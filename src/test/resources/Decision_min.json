@@ -1,0 +1,23 @@
+{
+    "id": "decision-1",
+    "kind": "decision",
+    "steps": [
+        {
+            "id": "test-step-1",
+            "kind": "test-step"
+        }
+    ],
+    "rules": [
+        {
+            "id": "rule-1",
+            "step": "test-step-1",
+            "conditions": [
+                {
+                    "id": "condition-1",
+                    "source": "context:location",
+                    "contains": "value"
+                }
+            ]
+        }
+    ]
+}

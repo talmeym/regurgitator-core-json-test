@@ -1,0 +1,11 @@
+{
+    "id": "generate-parameter-1",
+    "kind": "generate-parameter",
+    "name": "context:name",
+    "type": "NUMBER",
+    "merge": "LEAVE",
+    "generator": "test-value-generator",
+    "processor": {
+        "kind": "test-value-processor-2"
+    }
+}

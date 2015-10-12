@@ -1,0 +1,9 @@
+{
+    "kind": "sequence",
+    "steps": [
+        {
+            "kind": "create-parameter",
+            "name": "name",
+            "source": "context:location"
+        }
+    ]}

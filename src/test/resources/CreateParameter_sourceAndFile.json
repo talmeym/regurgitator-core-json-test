@@ -1,0 +1,7 @@
+{
+    "id": "create-param-1",
+    "kind":"create-parameter",
+    "name": "toTest1",
+    "file": "classpath:/test.file",
+    "source": "context:location"
+}

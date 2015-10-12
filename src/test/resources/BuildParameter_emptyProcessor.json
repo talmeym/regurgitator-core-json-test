@@ -1,0 +1,11 @@
+{
+    "id": "build-param-2",
+    "kind": "build-parameter",
+    "name": "toTest2",
+    "builder": {
+        "kind":"test-builder"
+    },
+    "processor": {
+
+    }
+}

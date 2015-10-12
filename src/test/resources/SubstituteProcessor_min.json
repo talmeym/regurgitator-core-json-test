@@ -1,0 +1,5 @@
+{
+    "kind": "substitute",
+    "token": "this",
+    "replacement": "that"
+}

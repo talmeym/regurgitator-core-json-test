@@ -1,0 +1,7 @@
+{
+    "id": "create-response-1",
+    "kind": "create-response",
+    "name": "toTest1",
+    "file": "classpath:/test.file",
+    "source": "context:location"
+}

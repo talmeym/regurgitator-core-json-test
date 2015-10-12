@@ -1,0 +1,10 @@
+{
+    "id": "sequence-1",
+    "kind": "sequence",
+    "steps": [
+        {
+            "id": "test-step-1",
+            "kind": "test-step"
+        }
+    ]
+}

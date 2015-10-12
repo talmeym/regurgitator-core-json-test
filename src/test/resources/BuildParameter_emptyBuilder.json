@@ -1,0 +1,8 @@
+{
+    "id": "build-param-1",
+    "kind": "build-parameter",
+    "name": "toTest1",
+    "builder": {
+
+    }
+}

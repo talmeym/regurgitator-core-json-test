@@ -1,0 +1,10 @@
+{
+    "id": "regurgitator-configuration-1",
+    "kind": "sequence",
+    "steps": [
+        {
+            "kind": "sequence-ref",
+            "file": "classpath:/CreateParameter_fullLoad.json"
+        }
+    ]
+}

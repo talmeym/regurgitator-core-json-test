@@ -1,0 +1,18 @@
+{
+    "id": "regurgitator-configuration-1",
+    "kind": "regurgitator-configuration",
+    "steps": [
+        {
+            "id": "create-parameter-1",
+            "kind": "create-parameter",
+            "name": "name",
+            "processor": {
+                "kind": "substitute-processor",
+                "token": "this",
+                "replacement": "that"
+
+            },
+            "value": "value"
+        }
+    ]
+}

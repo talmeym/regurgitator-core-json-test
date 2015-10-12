@@ -1,0 +1,67 @@
+{
+    "kind": "sequence",
+    "steps": [
+
+        {
+            "id": "decision-1",
+            "kind": "decision",
+            "steps": [
+                {
+                    "id": "test-step-1",
+                    "kind": "test-step"
+
+                },
+                {
+                    "id": "test-step-2",
+                    "kind": "test-step"
+                }
+            ],
+            "behaviour": "test-rules-behaviour",
+            "default-step": "test-step-2",
+            "rules": [
+                {
+                    "id": "rule-1",
+                    "step": "test-step-1",
+                    "conditions": [
+                        {
+                            "id": "condition-1",
+                            "behaviour": "equals",
+                            "source": "context:location1",
+                            "value": "value1",
+                            "expectation": false
+                        },
+                        {
+                            "id": "condition-2",
+                            "behaviour": {
+                                "kind": "test-condition-behaviour"
+                            },
+                            "source": "context:location2",
+                            "value": "value2"
+                        }
+                    ]
+                },
+                {
+                    "id": "rule-2",
+                    "step": "test-step-2",
+                    "conditions": [
+                        {
+                            "id": "condition-3",
+                            "behaviour": "equals",
+                            "source": "context:location3",
+                            "value": "value3",
+                            "expectation": false
+                        },
+                        {
+                            "id": "condition-4",
+                            "behaviour": {
+                                "kind": "test-condition-behaviour"
+                            },
+                            "source": "context:location4",
+                            "value": "value4"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

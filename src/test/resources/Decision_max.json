@@ -1,0 +1,68 @@
+{
+    "id": "decision-1",
+    "kind": "decision",
+    "steps": [
+        {
+            "id": "test-step-1",
+            "kind": "test-step"
+
+        },
+        {
+            "id": "test-step-2",
+            "kind": "test-step"
+        }
+    ],
+    "behaviour": {
+        "kind": "test-rules-behaviour"
+    },
+    "default-step": "test-step-2",
+    "rules": [
+        {
+            "id": "rule-1",
+            "step": "test-step-1",
+            "conditions": [
+                {
+                    "id": "condition-1",
+                    "behaviour": "equals",
+                    "source": "context:location1",
+                    "value": "value1",
+                    "expectation": false
+                },
+                {
+                    "id": "condition-2",
+                    "behaviour": {
+                        "kind": "test-condition-behaviour"
+                    },
+                    "source": "context:location2",
+                    "value": "value2"
+                }
+            ]
+        },
+        {
+            "id": "rule-2",
+            "step": "test-step-2",
+            "conditions": [
+                {
+                    "id": "condition-3",
+                    "source": "context:location3",
+                    "behaviour": "equals",
+                    "value": "value3",
+                    "expectation": false
+                },
+                {
+                    "id": "condition-4",
+                    "source": "context:location4",
+                    "behaviour": {
+                        "kind": "test-condition-behaviour"
+                    },
+                    "value": "value4"
+                },
+                {
+                    "id": "condition-5",
+                    "source": "context:location4",
+                    "test-condition-behaviour": "value5"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "id": "regurgitator-configuration-1",
+    "kind": "sequence",
+    "steps": [
+        {
+            "id": "create-param-1",
+            "kind": "create-parameter",
+            "name": "toTest1",
+            "source": "context:location"
+        }
+    ]
+}

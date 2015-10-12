@@ -1,0 +1,6 @@
+{
+    "id": "generate-parameter-1",
+    "kind": "generate-parameter",
+    "name": "name",
+    "generator": "UUID"
+}

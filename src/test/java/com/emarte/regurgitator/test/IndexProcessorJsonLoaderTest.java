@@ -13,17 +13,17 @@ public class IndexProcessorJsonLoaderTest extends JsonBaseTest {
 
 	@Test
 	public void testSource() throws Exception {
-		assertExpectation(getJsonObject("classpath:/IndexOfProcessor_source.json"), "com.emarte.regurgitator.core.IndexProcessor:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null]");
+		assertExpectation(getJsonObject("classpath:/IndexOfProcessor_source.json"), "com.emarte.regurgitator.core.IndexProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null]]");
 	}
 
 	@Test
 	public void testValue() throws Exception {
-		assertExpectation(getJsonObject("classpath:/IndexOfProcessor_value.json"), "com.emarte.regurgitator.core.IndexProcessor:[null,'value']");
+		assertExpectation(getJsonObject("classpath:/IndexOfProcessor_value.json"), "com.emarte.regurgitator.core.IndexProcessor:[com.emarte.regurgitator.core.ValueSource:[null,'value']]");
 	}
 
 	@Test
 	public void testSourceAndValue() throws Exception {
-		assertExpectation(getJsonObject("classpath:/IndexOfProcessor_sourceAndValue.json"), "com.emarte.regurgitator.core.IndexProcessor:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value']");
+		assertExpectation(getJsonObject("classpath:/IndexOfProcessor_sourceAndValue.json"), "com.emarte.regurgitator.core.IndexProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value']]");
 	}
 
 	@Test

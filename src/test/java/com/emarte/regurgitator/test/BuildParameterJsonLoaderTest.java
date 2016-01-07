@@ -23,7 +23,7 @@ public class BuildParameterJsonLoaderTest extends JsonBaseTest {
 
 	@Test
 	public void testMaximumFlatJson() throws Exception {
-		assertExpectation(getJsonObject("classpath:/BuildParameter_max_flat.json"), "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+		assertExpectation(getJsonObject("classpath:/BuildParameter_maxFlat.json"), "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
 	}
 
 	@Test

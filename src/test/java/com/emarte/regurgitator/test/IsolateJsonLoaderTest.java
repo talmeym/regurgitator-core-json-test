@@ -13,12 +13,17 @@ public class IsolateJsonLoaderTest extends JsonBaseTest {
 
 	@Test
 	public void testMin() throws Exception {
-		assertExpectation(getJsonObject("classpath:/Isolate_min.json"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],false]");
+		assertExpectation(getJsonObject("classpath:/Isolate_min.json"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],false,false]");
 	}
 
 	@Test
-	public void testMax() throws Exception {
-		assertExpectation(getJsonObject("classpath:/Isolate_max.json"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],true]");
+	public void testSession() throws Exception {
+		assertExpectation(getJsonObject("classpath:/Isolate_session.json"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],true,false]");
+	}
+
+	@Test
+	public void testParameters() throws Exception {
+		assertExpectation(getJsonObject("classpath:/Isolate_parameters.json"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],false,true]");
 	}
 
 	private void assertExpectation(JSONObject jsonObject, String expected) throws RegurgitatorException {

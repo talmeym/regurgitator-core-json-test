@@ -1,0 +1,9 @@
+{
+    "id": "isolate-1",
+    "kind": "isolate",
+    "step": {
+        "id": "test-step-1",
+        "kind": "test-step"
+    },
+    "include-parameters": true
+}

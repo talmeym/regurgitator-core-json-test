@@ -26,6 +26,11 @@ public class IsolateJsonLoaderTest extends JsonBaseTest {
 		assertExpectation(getJsonObject("classpath:/Isolate_parameters.json"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],false,true]");
 	}
 
+	@Test
+	public void testFullLoadJson() throws RegurgitatorException {
+		ConfigurationFile.loadFile("classpath:/Isolate_fullLoad.json");
+	}
+
 	private void assertExpectation(JSONObject jsonObject, String expected) throws RegurgitatorException {
 		assertEquals(expected, toTest.load(jsonObject, new HashSet<Object>()).toString());
 	}

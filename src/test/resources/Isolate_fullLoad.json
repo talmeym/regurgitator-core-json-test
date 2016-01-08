@@ -1,0 +1,11 @@
+{
+    "kind": "sequence",
+    "steps": [
+        {
+            "kind": "isolate",
+            "step": {
+                "kind": "test-step"
+            }
+        }
+    ]
+}

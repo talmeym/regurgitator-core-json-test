@@ -1,37 +1,32 @@
 package com.emarte.regurgitator.test;
 
 import com.emarte.regurgitator.core.*;
-import net.sf.json.JSONObject;
 import org.junit.Test;
 
-import java.util.HashSet;
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
 
-import static junit.framework.Assert.assertEquals;
-
-public class IsolateJsonLoaderTest extends JsonBaseTest {
-	private IsolateJsonLoader toTest = new IsolateJsonLoader();
+public class IsolateJsonLoaderTest extends JsonLoaderTest {
+	public IsolateJsonLoaderTest() {
+		super(new IsolateJsonLoader());
+	}
 
 	@Test
 	public void testMin() throws Exception {
-		assertExpectation(getJsonObject("classpath:/Isolate_min.json"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],false,false]");
+		assertExpectation("classpath:/Isolate_min.json", "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],false,false]");
 	}
 
 	@Test
 	public void testSession() throws Exception {
-		assertExpectation(getJsonObject("classpath:/Isolate_session.json"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],true,false]");
+		assertExpectation("classpath:/Isolate_session.json", "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],true,false]");
 	}
 
 	@Test
 	public void testParameters() throws Exception {
-		assertExpectation(getJsonObject("classpath:/Isolate_parameters.json"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],false,true]");
+		assertExpectation("classpath:/Isolate_parameters.json", "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],false,true]");
 	}
 
 	@Test
 	public void testFullLoadJson() throws RegurgitatorException {
-		ConfigurationFile.loadFile("classpath:/Isolate_fullLoad.json");
-	}
-
-	private void assertExpectation(JSONObject jsonObject, String expected) throws RegurgitatorException {
-		assertEquals(expected, toTest.load(jsonObject, new HashSet<Object>()).toString());
+		loadFile("classpath:/Isolate_fullLoad.json");
 	}
 }

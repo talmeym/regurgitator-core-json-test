@@ -3,9 +3,16 @@
     "steps": [
         {
             "kind": "isolate",
-            "step": {
-                "kind": "test-step"
-            }
+            "steps": [
+                {
+                    "id": "test-step-1",
+                    "kind": "test-step"
+                },
+                {
+                    "id": "test-step-2",
+                    "kind": "test-step"
+                }
+            ]
         }
     ]
 }

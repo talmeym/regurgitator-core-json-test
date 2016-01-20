@@ -12,12 +12,27 @@ public class SequenceJsonLoaderTest extends JsonLoaderTest {
 
 	@Test
 	public void testMinimumJson() throws Exception {
-		assertExpectation("classpath:/Sequence_min.json", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1']]]");
+		assertExpectation("classpath:/Sequence_min.json", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1']],null]");
 	}
 
 	@Test
 	public void testMaximumJson() throws Exception {
-		assertExpectation("classpath:/Sequence_max.json", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-3']]]");
+		assertExpectation("classpath:/Sequence_max.json", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-3']],com.emarte.regurgitator.core.Isolate:[true,true]]");
+	}
+
+	@Test
+	public void testIsolateJson() throws Exception {
+		assertExpectation("classpath:/Sequence_isolate.json", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-3']],com.emarte.regurgitator.core.Isolate:[false,false]]");
+	}
+
+	@Test
+	public void testIsolateParamsJson() throws Exception {
+		assertExpectation("classpath:/Sequence_isolateParams.json", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-3']],com.emarte.regurgitator.core.Isolate:[false,true]]");
+	}
+
+	@Test
+	public void testIsolateSessionJson() throws Exception {
+		assertExpectation("classpath:/Sequence_isolateSession.json", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-3']],com.emarte.regurgitator.core.Isolate:[true,false]]");
 	}
 
 	@Test

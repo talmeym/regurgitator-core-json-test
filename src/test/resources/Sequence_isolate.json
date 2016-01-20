@@ -1,14 +1,20 @@
 {
-    "id": "isolate-1",
-    "kind": "isolate",
+    "id": "sequence-1",
+    "kind": "sequence",
     "steps": [
         {
             "id": "test-step-1",
             "kind": "test-step"
+
         },
         {
             "id": "test-step-2",
             "kind": "test-step"
+        },
+        {
+            "id": "test-step-3",
+            "kind": "test-step"
         }
-    ]
+    ],
+    "isolate": "true"
 }

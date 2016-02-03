@@ -16,5 +16,5 @@
             "kind": "test-step"
         }
     ],
-    "isolate": "include-session"
+    "isolate": "with-session"
 }

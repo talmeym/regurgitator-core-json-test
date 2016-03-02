@@ -1,2 +1,5 @@
-# regurgitator-core-config-json-test
-Regurgitator is a simple extendable processing engine, ideal for regurgitating canned or clever response to incoming requests. This component tests the json configuration of the core framework.
+# regurgitator-core-json-test
+
+regurgitator is a modular, light-weight, extendable java-based processing framework designed to 'regurgitate' canned or clever responses to incoming requests; useful for mocking or prototyping services.
+
+start your reading here: [regurgitator-all](http://github.com/talmeym/regurgitator-all#regurgitator)

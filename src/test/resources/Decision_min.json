@@ -16,9 +16,7 @@
                     "id": "condition-1",
                     "source": "context:location",
                     "value": "value",
-                    "behaviour": {
-                        "kind": "contains"
-                    }
+                    "behaviour": "contains"
                 }
             ]
         }

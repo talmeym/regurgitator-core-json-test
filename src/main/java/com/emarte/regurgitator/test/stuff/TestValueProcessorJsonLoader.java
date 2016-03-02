@@ -5,9 +5,9 @@ import net.sf.json.JSONObject;
 
 import java.util.Set;
 
-public class TestValueProcessorJsonLoader implements JsonLoader<ValueProcessor> {
+public class TestValueProcessorJsonLoader implements JsonLoader<TestValueProcessor> {
 	@Override
-	public ValueProcessor load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
+	public TestValueProcessor load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
 		return new TestValueProcessor();
 	}
 }

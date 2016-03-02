@@ -5,9 +5,9 @@ import net.sf.json.JSONObject;
 
 import java.util.Set;
 
-public class TestConditionBehaviourJsonLoader implements JsonLoader<ConditionBehaviour> {
+public class TestConditionBehaviourJsonLoader implements JsonLoader<TestConditionBehaviour> {
 	@Override
-	public ConditionBehaviour load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
+	public TestConditionBehaviour load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
 		return new TestConditionBehaviour();
 	}
 }

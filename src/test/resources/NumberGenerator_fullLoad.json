@@ -1,0 +1,13 @@
+{
+    "kind": "sequence",
+    "steps": [
+        {
+            "kind": "generate-parameter",
+            "name": "name",
+            "generator": {
+                "kind": "number-generator",
+                "max": "1234"
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "kind": "sequence",
+    "steps": [
+        {
+            "kind": "generate-parameter",
+            "name": "name",
+            "generator": {
+                "kind": "uuid-generator"
+            }
+        }
+    ]
+}

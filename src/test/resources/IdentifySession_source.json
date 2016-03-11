@@ -1,0 +1,5 @@
+{
+    "id": "identify-session-1",
+    "kind": "identify-session",
+    "source": "context:location"
+}

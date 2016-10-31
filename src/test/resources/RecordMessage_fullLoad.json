@@ -1,0 +1,11 @@
+{
+    "id": "sequence-1",
+    "kind": "sequence",
+    "steps": [
+        {
+            "id": "record-message-1",
+            "kind": "record-message",
+            "folder": "/folder/folder"
+        }
+    ]
+}

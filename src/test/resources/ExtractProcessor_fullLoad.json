@@ -4,6 +4,12 @@
         {
             "kind": "create-parameter",
             "name": "name",
-            "source": "context:location"
+            "source": "context:location",
+            "processor": {
+                "id": "extract-value-1",
+                "kind": "extract-processor",
+                "format": "this is {0} test",
+                "index": 0
+            }
         }
     ]}

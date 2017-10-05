@@ -8,8 +8,8 @@ import java.util.Set;
 import static com.emarte.regurgitator.core.JsonConfigUtil.loadId;
 
 public class TestStepJsonLoader implements JsonLoader<Step> {
-	@Override
-	public Step load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
-		return new TestStep(loadId(jsonObject, allIds));
-	}
+    @Override
+    public Step load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
+        return new TestStep(loadId(jsonObject, allIds));
+    }
 }

@@ -6,8 +6,8 @@ import net.sf.json.JSONObject;
 import java.util.Set;
 
 public class TestValueBuilderJsonLoader implements JsonLoader<ValueBuilder> {
-	@Override
-	public ValueBuilder load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
-		return new TestValueBuilder();
-	}
+    @Override
+    public ValueBuilder load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
+        return new TestValueBuilder();
+    }
 }

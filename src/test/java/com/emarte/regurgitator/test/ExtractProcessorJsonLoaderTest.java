@@ -19,5 +19,4 @@ public class ExtractProcessorJsonLoaderTest extends JsonLoaderTest {
     public void testFullLoadJson() throws Exception {
         loadFile("classpath:/ExtractProcessor_fullLoad.json");
     }
-
 }

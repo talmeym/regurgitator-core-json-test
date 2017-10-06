@@ -18,12 +18,12 @@ public class JsonLoaderTest {
         this.toTest = toTest;
     }
 
-    protected JSONObject getJsonObject(String filePath) throws IOException {
-        return fromObject(streamToString(FileUtil.getInputStreamForFile(filePath)));
-    }
-
     protected String loadFromFile(String filePath) throws RegurgitatorException, IOException {
         return toTest.load(getJsonObject(filePath), new HashSet<Object>()).toString();
+    }
+
+    private JSONObject getJsonObject(String filePath) throws IOException {
+        return fromObject(streamToString(FileUtil.getInputStreamForFile(filePath)));
     }
 
     protected final void assertExpectation(String filePath, String expected) throws RegurgitatorException, IOException {

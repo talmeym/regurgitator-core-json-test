@@ -8,6 +8,8 @@ import com.emarte.regurgitator.core.NumberGeneratorJsonLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.NumberGenerator;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.NumberGenerator_max;
 
 public class NumberGeneratorJsonLoaderTest extends JsonLoaderTest {
     public NumberGeneratorJsonLoaderTest() {
@@ -16,12 +18,12 @@ public class NumberGeneratorJsonLoaderTest extends JsonLoaderTest {
 
     @Test
     public void testThis() throws Exception {
-        assertExpectation("classpath:/NumberGenerator.json", "com.emarte.regurgitator.core.NumberGenerator:[null]");
+        assertExpectation("classpath:/NumberGenerator.json", NumberGenerator);
     }
 
     @Test
-    public void testMax() throws Exception {
-        assertExpectation("classpath:/NumberGenerator_max.json", "com.emarte.regurgitator.core.NumberGenerator:[1234]");
+    public void testMaximum() throws Exception {
+        assertExpectation("classpath:/NumberGenerator_max.json", NumberGenerator_max);
     }
 
     @Test

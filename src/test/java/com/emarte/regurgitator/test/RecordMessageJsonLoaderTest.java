@@ -8,6 +8,8 @@ import com.emarte.regurgitator.core.RecordMessageJsonLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.RecordMessage_folder;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.RecordMessage_min;
 
 public class RecordMessageJsonLoaderTest extends JsonLoaderTest {
     public RecordMessageJsonLoaderTest() {
@@ -15,17 +17,17 @@ public class RecordMessageJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
-    public void testMin() throws Exception {
-        assertExpectation("classpath:/RecordMessage_min.json", "com.emarte.regurgitator.core.RecordMessage:['record-message-1',null]");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/RecordMessage_min.json", RecordMessage_min);
     }
 
     @Test
     public void testFolder() throws Exception {
-        assertExpectation("classpath:/RecordMessage_folder.json", "com.emarte.regurgitator.core.RecordMessage:['record-message-1','/folder/folder']");
+        assertExpectation("classpath:/RecordMessage_folder.json", RecordMessage_folder);
     }
 
     @Test
-    public void testFullLoadJson() throws Exception {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/RecordMessage_fullLoad.json");
     }
 }

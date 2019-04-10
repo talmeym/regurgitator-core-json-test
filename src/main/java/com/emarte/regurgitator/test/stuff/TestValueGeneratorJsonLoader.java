@@ -4,7 +4,9 @@
  */
 package com.emarte.regurgitator.test.stuff;
 
-import com.emarte.regurgitator.core.*;
+import com.emarte.regurgitator.core.JsonLoader;
+import com.emarte.regurgitator.core.RegurgitatorException;
+import com.emarte.regurgitator.core.ValueGenerator;
 import net.sf.json.JSONObject;
 
 import java.util.Set;

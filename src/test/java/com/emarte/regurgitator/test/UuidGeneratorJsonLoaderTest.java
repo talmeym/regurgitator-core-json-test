@@ -8,6 +8,7 @@ import com.emarte.regurgitator.core.UuidGeneratorJsonLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.UuidGenerator;
 
 public class UuidGeneratorJsonLoaderTest extends JsonLoaderTest {
     public UuidGeneratorJsonLoaderTest() {
@@ -16,7 +17,7 @@ public class UuidGeneratorJsonLoaderTest extends JsonLoaderTest {
 
     @Test
     public void testThis() throws Exception {
-        assertExpectation("classpath:/UuidGenerator.json", "com.emarte.regurgitator.core.UuidGenerator:[]");
+        assertExpectation("classpath:/UuidGenerator.json", UuidGenerator);
     }
 
     @Test

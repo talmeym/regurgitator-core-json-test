@@ -8,6 +8,7 @@ import com.emarte.regurgitator.core.ExtractProcessorJsonLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.ExtractProcessor_min;
 
 public class ExtractProcessorJsonLoaderTest extends JsonLoaderTest {
     public ExtractProcessorJsonLoaderTest() {
@@ -15,12 +16,12 @@ public class ExtractProcessorJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
-    public void testMinimumJson() throws Exception {
-        assertExpectation("classpath:/ExtractProcessor_min.json", "com.emarte.regurgitator.core.ExtractProcessor:['this is {0} test',0]");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/ExtractProcessor_min.json", ExtractProcessor_min);
     }
 
     @Test
-    public void testFullLoadJson() throws Exception {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/ExtractProcessor_fullLoad.json");
     }
 }

@@ -8,6 +8,7 @@ import com.emarte.regurgitator.core.IndexOfProcessorJsonLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 
 public class IndexOfProcessorJsonLoaderTest extends JsonLoaderTest {
     public IndexOfProcessorJsonLoaderTest() {
@@ -15,18 +16,18 @@ public class IndexOfProcessorJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
-    public void testSource() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_source.json", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null],false]");
+    public void testValue() throws Exception {
+        assertExpectation("classpath:/IndexOfProcessor_value.json", IndexOfProcessor_value);
     }
 
     @Test
-    public void testValue() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_value.json", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[null,'value'],false]");
+    public void testSource() throws Exception {
+        assertExpectation("classpath:/IndexOfProcessor_source.json", IndexOfProcessor_source);
     }
 
     @Test
     public void testSourceAndValue() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_sourceAndValue.json", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value'],false]");
+        assertExpectation("classpath:/IndexOfProcessor_sourceAndValue.json", IndexOfProcessor_sourceAndValue);
     }
 
     @Test

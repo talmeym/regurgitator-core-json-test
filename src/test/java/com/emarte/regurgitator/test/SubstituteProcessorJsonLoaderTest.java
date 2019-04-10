@@ -4,11 +4,11 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.core.SubstituteProcessorJsonLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.SubstituteProcessor_min;
 
 public class SubstituteProcessorJsonLoaderTest extends JsonLoaderTest {
     public SubstituteProcessorJsonLoaderTest() {
@@ -16,12 +16,12 @@ public class SubstituteProcessorJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
-    public void testMinimumJson() throws Exception {
-        assertExpectation("classpath:/SubstituteProcessor_min.json", "com.emarte.regurgitator.core.SubstituteProcessor:['this','that']");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/SubstituteProcessor_min.json", SubstituteProcessor_min);
     }
 
     @Test
-    public void testFullLoadJson() throws RegurgitatorException {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/SubstituteProcessor_fullLoad.json");
     }
 }

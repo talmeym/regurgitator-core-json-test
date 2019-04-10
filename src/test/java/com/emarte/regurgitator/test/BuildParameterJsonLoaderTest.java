@@ -4,8 +4,12 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.*;
+import com.emarte.regurgitator.core.BuildParameterJsonLoader;
+import com.emarte.regurgitator.core.ConfigurationFile;
+import com.emarte.regurgitator.core.RegurgitatorException;
 import org.junit.Test;
+
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 
 public class BuildParameterJsonLoaderTest extends JsonLoaderTest {
     public BuildParameterJsonLoaderTest() {
@@ -13,18 +17,18 @@ public class BuildParameterJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
-    public void testMinimumJson() throws Exception {
-        assertExpectation("classpath:/BuildParameter_min.json", "com.emarte.regurgitator.core.BuildParameter:['build-param-1',com.emarte.regurgitator.core.ParameterPrototype:['toTest1',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],null]");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/BuildParameter_min.json", BuildParameter_min);
     }
 
     @Test
-    public void testMaximumJson() throws Exception {
-        assertExpectation("classpath:/BuildParameter_max.json", "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+    public void testMaximum() throws Exception {
+        assertExpectation("classpath:/BuildParameter_max.json", BuildParameter_max);
     }
 
     @Test
-    public void testMaximumFlatJson() throws Exception {
-        assertExpectation("classpath:/BuildParameter_maxFlat.json", "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+    public void testMaximumFlat() throws Exception {
+        assertExpectation("classpath:/BuildParameter_maxFlat.json", BuildParameter_maxFlat);
     }
 
     @Test

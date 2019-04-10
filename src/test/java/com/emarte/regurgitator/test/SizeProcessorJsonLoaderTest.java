@@ -8,6 +8,8 @@ import com.emarte.regurgitator.core.SizeProcessorJsonLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.SizeProcessor;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.SizeProcessor_asIndex;
 
 public class SizeProcessorJsonLoaderTest extends JsonLoaderTest {
     public SizeProcessorJsonLoaderTest() {
@@ -15,13 +17,13 @@ public class SizeProcessorJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
-    public void testJson() throws Exception {
-        assertExpectation("classpath:/SizeProcessor.json", "com.emarte.regurgitator.core.SizeProcessor:[false]");
+    public void testThis() throws Exception {
+        assertExpectation("classpath:/SizeProcessor.json", SizeProcessor);
     }
 
     @Test
     public void testLastIndex() throws Exception {
-        assertExpectation("classpath:/SizeProcessor_asIndex.json", "com.emarte.regurgitator.core.SizeProcessor:[true]");
+        assertExpectation("classpath:/SizeProcessor_asIndex.json", SizeProcessor_asIndex);
     }
 
     @Test

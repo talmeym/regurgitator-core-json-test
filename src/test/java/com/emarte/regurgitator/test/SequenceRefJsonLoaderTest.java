@@ -8,6 +8,7 @@ import com.emarte.regurgitator.core.SequenceRefJsonLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 
 public class SequenceRefJsonLoaderTest extends JsonLoaderTest {
     public SequenceRefJsonLoaderTest() {
@@ -16,7 +17,7 @@ public class SequenceRefJsonLoaderTest extends JsonLoaderTest {
 
     @Test
     public void testMinimum() throws Exception {
-        assertExpectation("classpath:/SequenceRef_min.json", "com.emarte.regurgitator.core.Sequence:['regurgitator-configuration-1',[com.emarte.regurgitator.core.CreateParameter:['create-param-1',com.emarte.regurgitator.core.ParameterPrototype:['toTest1',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null],[]]],null]");
+        assertExpectation("classpath:/SequenceRef_min.json", SequenceRef_min);
     }
 
     @Test

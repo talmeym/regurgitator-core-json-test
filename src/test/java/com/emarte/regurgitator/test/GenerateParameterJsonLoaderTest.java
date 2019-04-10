@@ -32,6 +32,11 @@ public class GenerateParameterJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
+    public void testMaximumMultipleProcessors() throws Exception {
+        assertExpectation("classpath:/GenerateParameter_maxMultipleProcessors.json", GenerateParameter_maxMultipleProcessors);
+    }
+
+    @Test
     public void testFullLoad() throws Exception {
         loadFile("classpath:/GenerateParameter_fullLoad.json");
     }

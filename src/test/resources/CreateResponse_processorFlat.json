@@ -2,7 +2,5 @@
     "id": "create-response-1",
     "kind":"create-response",
     "value": "value",
-    "processor": {
-        "kind": "test-value-processor"
-    }
+    "processor": "test-value-processor"
 }

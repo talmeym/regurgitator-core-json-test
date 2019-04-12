@@ -32,6 +32,16 @@ public class BuildParameterJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
+    public void testMultipleProcessors() throws Exception {
+        assertExpectation("classpath:/BuildParameter_multipleProcessors.json", BuildParameter_multipleProcessors);
+    }
+
+    @Test
+    public void testMultipleProcessorsFlat() throws Exception {
+        assertExpectation("classpath:/BuildParameter_multipleProcessorsFlat.json", BuildParameter_multipleProcessorsFlat);
+    }
+
+    @Test
     public void testFullLoad() throws Exception {
         ConfigurationFile.loadFile("classpath:/BuildParameter_fullLoad.json");
     }
@@ -59,5 +69,20 @@ public class BuildParameterJsonLoaderTest extends JsonLoaderTest {
     @Test(expected = RegurgitatorException.class)
     public void testInvalidJsonMissingProcessorClass() throws Exception {
         loadFromFile("classpath:/BuildParameter_missingProcessorClass.json");
+    }
+
+    @Test(expected = RegurgitatorException.class)
+    public void testInvalidJsonBothProcessorAndProcessorsPresent() throws Exception {
+        loadFromFile("classpath:/BuildParameter_processorAndProcessors.json");
+    }
+
+    @Test(expected = RegurgitatorException.class)
+    public void testInvalidJsonProcessorContainsArray() throws Exception {
+        loadFromFile("classpath:/BuildParameter_processorAsArray.json");
+    }
+
+    @Test(expected = RegurgitatorException.class)
+    public void testInvalidJsonProcessorsContainsObject() throws Exception {
+        loadFromFile("classpath:/BuildParameter_processorsAsObject.json");
     }
 }

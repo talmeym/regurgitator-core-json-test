@@ -32,8 +32,13 @@ public class GenerateParameterJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
-    public void testMaximumMultipleProcessors() throws Exception {
-        assertExpectation("classpath:/GenerateParameter_maxMultipleProcessors.json", GenerateParameter_maxMultipleProcessors);
+    public void testMultipleProcessors() throws Exception {
+        assertExpectation("classpath:/GenerateParameter_multipleProcessors.json", GenerateParameter_multipleProcessors);
+    }
+
+    @Test
+    public void testMultipleProcessorsFlat() throws Exception {
+        assertExpectation("classpath:/GenerateParameter_multipleProcessorsFlat.json", GenerateParameter_multipleProcessorsFlat);
     }
 
     @Test

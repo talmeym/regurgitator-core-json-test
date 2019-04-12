@@ -7,7 +7,7 @@
   "generator": {
     "kind": "test-value-generator"
   },
-  "processor": [
+  "processors": [
     {
       "kind": "test-value-processor"
     },

@@ -1,0 +1,14 @@
+{
+  "id": "create-param-1",
+  "kind": "create-parameter",
+  "name": "toTest1",
+  "source": "context:location",
+  "processors": [
+    {
+      "kind": "test-value-processor"
+    },
+    {
+      "kind": "test-value-processor"
+    }
+  ]
+}

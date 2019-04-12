@@ -1,0 +1,13 @@
+{
+  "id": "create-response-1",
+  "kind": "create-response",
+  "value": "value",
+  "processors": [
+    {
+      "kind": "test-value-processor"
+    },
+    {
+      "kind": "test-value-processor"
+    }
+  ]
+}

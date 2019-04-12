@@ -1,0 +1,15 @@
+{
+  "id": "build-param-2",
+  "kind": "build-parameter",
+  "name": "something:toTest2",
+  "type": "NUMBER",
+  "merge": "LEAVE",
+  "builder": {
+    "kind": "test-value-builder"
+  },
+  "processor": [
+    {
+      "kind": "test-value-processor"
+    }
+  ]
+}

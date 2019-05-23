@@ -5,14 +5,13 @@
 package com.emarte.regurgitator.test.stuff;
 
 import com.emarte.regurgitator.core.JsonLoader;
-import com.emarte.regurgitator.core.RegurgitatorException;
 import net.sf.json.JSONObject;
 
 import java.util.Set;
 
 public class TestValueProcessorJsonLoader implements JsonLoader<TestValueProcessor> {
     @Override
-    public TestValueProcessor load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
+    public TestValueProcessor load(JSONObject jsonObject, Set<Object> allIds) {
         return new TestValueProcessor();
     }
 }

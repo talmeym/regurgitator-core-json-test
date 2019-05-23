@@ -5,7 +5,6 @@
 package com.emarte.regurgitator.test.stuff;
 
 import com.emarte.regurgitator.core.JsonLoader;
-import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.core.ValueBuilder;
 import net.sf.json.JSONObject;
 
@@ -13,7 +12,7 @@ import java.util.Set;
 
 public class TestValueBuilderJsonLoader implements JsonLoader<ValueBuilder> {
     @Override
-    public ValueBuilder load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
+    public ValueBuilder load(JSONObject jsonObject, Set<Object> allIds) {
         return new TestValueBuilder();
     }
 }

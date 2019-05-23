@@ -5,14 +5,13 @@
 package com.emarte.regurgitator.test.stuff;
 
 import com.emarte.regurgitator.core.JsonLoader;
-import com.emarte.regurgitator.core.RegurgitatorException;
 import net.sf.json.JSONObject;
 
 import java.util.Set;
 
 public class TestConditionBehaviourJsonLoader implements JsonLoader<TestConditionBehaviour> {
     @Override
-    public TestConditionBehaviour load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
+    public TestConditionBehaviour load(JSONObject jsonObject, Set<Object> allIds) {
         return new TestConditionBehaviour();
     }
 }

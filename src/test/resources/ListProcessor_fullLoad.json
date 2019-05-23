@@ -1,0 +1,21 @@
+{
+  "kind": "sequence",
+  "steps": [
+    {
+      "kind": "create-parameter",
+      "name": "name",
+      "source": "context:location",
+      "processor": {
+        "kind": "list-processor",
+        "processors": [
+          {
+            "kind": "test-value-processor"
+          },
+          {
+            "kind": "test-value-processor"
+          }
+        ]
+      }
+    }
+  ]
+}

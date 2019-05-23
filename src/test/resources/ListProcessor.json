@@ -1,0 +1,11 @@
+{
+  "kind": "list-processor",
+  "processors": [
+    {
+      "kind": "test-value-processor"
+    },
+    {
+      "kind": "test-value-processor"
+    }
+  ]
+}

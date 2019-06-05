@@ -1,0 +1,15 @@
+{
+    "kind": "sequence",
+    "steps": [
+        {
+            "kind": "create-parameter",
+            "name": "name",
+            "source": "context:location",
+            "processor": {
+                "kind": "set-at-index-processor",
+                "index-source": "param-1",
+                "value-source": "param-2"
+            }
+        }
+    ]
+}

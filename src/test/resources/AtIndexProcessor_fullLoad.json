@@ -6,7 +6,7 @@
             "name": "name",
             "source": "context:location",
             "processor": {
-                "kind": "index-processor",
+                "kind": "at-index-processor",
                 "source": "context:location"
             }
         }

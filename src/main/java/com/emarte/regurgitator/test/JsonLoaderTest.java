@@ -18,9 +18,9 @@ import static net.sf.json.JSONObject.fromObject;
 import static org.junit.Assert.assertEquals;
 
 public class JsonLoaderTest {
-    private final JsonLoader toTest;
+    private final JsonLoader<?> toTest;
 
-    public JsonLoaderTest(JsonLoader toTest) {
+    public JsonLoaderTest(JsonLoader<?> toTest) {
         this.toTest = toTest;
     }
 

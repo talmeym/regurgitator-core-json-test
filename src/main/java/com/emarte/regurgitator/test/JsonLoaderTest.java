@@ -25,7 +25,7 @@ public class JsonLoaderTest {
     }
 
     protected String loadFromFile(String filePath) throws RegurgitatorException, IOException {
-        return toTest.load(getJsonObject(filePath), new HashSet<Object>()).toString();
+        return toTest.load(getJsonObject(filePath), new HashSet<>()).toString();
     }
 
     private JSONObject getJsonObject(String filePath) throws IOException {

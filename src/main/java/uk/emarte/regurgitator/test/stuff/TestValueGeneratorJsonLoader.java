@@ -4,9 +4,9 @@
  */
 package uk.emarte.regurgitator.test.stuff;
 
+import net.sf.json.JSONObject;
 import uk.emarte.regurgitator.core.JsonLoader;
 import uk.emarte.regurgitator.core.ValueGenerator;
-import net.sf.json.JSONObject;
 
 import java.util.Set;
 

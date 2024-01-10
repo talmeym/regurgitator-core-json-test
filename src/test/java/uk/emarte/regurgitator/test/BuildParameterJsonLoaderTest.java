@@ -4,10 +4,10 @@
  */
 package uk.emarte.regurgitator.test;
 
+import org.junit.Test;
 import uk.emarte.regurgitator.core.BuildParameterJsonLoader;
 import uk.emarte.regurgitator.core.ConfigurationFile;
 import uk.emarte.regurgitator.core.RegurgitatorException;
-import org.junit.Test;
 
 import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 

@@ -4,10 +4,10 @@
  */
 package uk.emarte.regurgitator.test.stuff;
 
+import net.sf.json.JSONObject;
 import uk.emarte.regurgitator.core.JsonLoader;
 import uk.emarte.regurgitator.core.RegurgitatorException;
 import uk.emarte.regurgitator.core.Step;
-import net.sf.json.JSONObject;
 
 import java.util.Set;
 

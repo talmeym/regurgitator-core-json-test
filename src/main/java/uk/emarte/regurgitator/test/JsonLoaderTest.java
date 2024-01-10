@@ -4,18 +4,18 @@
  */
 package uk.emarte.regurgitator.test;
 
+import net.sf.json.JSONObject;
 import uk.emarte.regurgitator.core.FileUtil;
 import uk.emarte.regurgitator.core.JsonLoader;
 import uk.emarte.regurgitator.core.RegurgitatorException;
-import net.sf.json.JSONObject;
 
 import java.io.IOException;
 import java.util.HashSet;
 
-import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
-import static uk.emarte.regurgitator.core.FileUtil.streamToString;
 import static net.sf.json.JSONObject.fromObject;
 import static org.junit.Assert.assertEquals;
+import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static uk.emarte.regurgitator.core.FileUtil.streamToString;
 
 public class JsonLoaderTest {
     private final JsonLoader<?> toTest;

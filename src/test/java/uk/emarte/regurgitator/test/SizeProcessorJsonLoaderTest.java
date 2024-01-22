@@ -17,7 +17,7 @@ public class SizeProcessorJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
-    public void testThis() throws Exception {
+    public void testProcessor() throws Exception {
         assertExpectation("classpath:/SizeProcessor.json", SizeProcessor);
     }
 

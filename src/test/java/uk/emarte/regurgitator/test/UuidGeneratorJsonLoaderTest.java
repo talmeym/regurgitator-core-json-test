@@ -16,7 +16,7 @@ public class UuidGeneratorJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
-    public void testThis() throws Exception {
+    public void testLoader() throws Exception {
         assertExpectation("classpath:/UuidGenerator.json", UuidGenerator);
     }
 

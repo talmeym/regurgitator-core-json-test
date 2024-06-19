@@ -1,0 +1,7 @@
+{
+    "id": "generate-parameter-1",
+    "kind": "generate-parameter",
+    "name": "name",
+    "generator": "test-value-generator",
+    "optional": true
+}

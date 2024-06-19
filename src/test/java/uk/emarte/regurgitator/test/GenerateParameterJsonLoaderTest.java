@@ -22,6 +22,11 @@ public class GenerateParameterJsonLoaderTest extends JsonLoaderTest {
     }
 
     @Test
+    public void testMinimumOptional() throws Exception {
+        assertExpectation("classpath:/GenerateParameter_min_optional.json", GenerateParameter_min_optional);
+    }
+
+    @Test
     public void testMaximum() throws Exception {
         assertExpectation("classpath:/GenerateParameter_max.json", GenerateParameter_max);
     }
